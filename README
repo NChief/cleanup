@@ -1,7 +1,22 @@
 This script deletes old files from a specified dir if low disk space.
 
+--
+
 INSTALL: 
 Edit the top of the script.
 
 Set this in a cronjob with:
 @midnight /path/to/script/cleanup.pl > /path/to/log.log
+
+---
+
+tips if running rtorrent:
+
+install the pyroscop tools: http://code.google.com/p/pyroscope/
+
+add this to cron:
+* * * * * ~/bin/rtcontrol --from-view started 'message=*not?registered*,*unregistered*,*not?authorized*' OR is_complete=yes is_ghost=yes --delete --yes --cron
+
+This wil automaticly remove delted files from rtorrent.
+
+---
