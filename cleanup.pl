@@ -2,7 +2,7 @@
 
 use Filesys::Df;
 use File::Path;
-use Data::Dumper;
+#use Data::Dumper;
 
 # Folder to delete old rls from.
 my $folder = "/home/tomme/Uploads/";
